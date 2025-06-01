@@ -1,0 +1,76 @@
+.futuristic-table-wrapper {
+    background: rgba(11, 10, 20, 0.7);
+    border-radius: 18px;
+    box-shadow: 0 0 48px #42c8ee99, 0 0 16px #0b0a14;
+    padding: 2.5rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 2.5px solid #42c8ee;
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .futuristic-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #fff;
+    font-size: 1.25em;
+    background: transparent;
+    box-shadow: 0 0 18px #42c8ee44;
+  }
+  
+  .futuristic-table th, .futuristic-table td {
+    border: 1.5px solid #42c8ee;
+    padding: 1.1em 1.2em;
+    text-align: left;
+    background: rgba(11, 10, 20, 0.85);
+    box-shadow: 0 0 8px #42c8ee33 inset;
+  }
+  
+  .futuristic-table th {
+    color: #42c8ee;
+    font-size: 1.15em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: rgba(11, 10, 20, 0.95);
+    text-shadow: 0 0 8px #42c8ee, 0 0 2px #fff;
+  }
+  
+  .futuristic-table tr {
+    transition: background 0.3s;
+  }
+  
+  .futuristic-table tr:hover td {
+    background: rgba(66, 200, 238, 0.18);
+    box-shadow: 0 0 32px #42c8ee99 inset;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .icon-neon {
+    color: #42c8ee;
+    filter: drop-shadow(0 0 6px #42c8ee);
+    animation: neon-pulse 1.5s infinite alternate;
+  }
+  
+  @keyframes neon-pulse {
+    from {
+      filter: drop-shadow(0 0 6px #42c8ee);
+    }
+    to {
+      filter: drop-shadow(0 0 18px #42c8ee);
+    }
+  }
+  
+  .futuristic-table-animated {
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: translateY(0); }
+  } 
