@@ -31,11 +31,23 @@ function Slide1() {
             Arquitectura actual y evolución a n8n + IA
           </span>
         </div>
+        <div className="slide1-down-arrow" style={{marginTop: "-50%"}}>
+        <svg width="56" height="32" viewBox="0 0 56 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="8,8 28,28 48,8" stroke="#42c8ee" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
+          <defs>
+            <filter id="glow" x="0" y="0" width="56" height="32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#42c8ee"/>
+            </filter>
+          </defs>
+        </svg>
+      </div>
       </Container>
       {/* Logo Groovit en la esquina inferior derecha */}
       <div className="slide1-logo-box">
         <img src={logo} className="slide1-logo" alt="brand" />
       </div>
+      {/* Flecha animada para deslizar */}
+     
       <style>{`
         .hex-svg-1 { position: absolute; top: 0; left: 0; z-index: 1; }
         .hex-svg-2 { position: absolute; bottom: 60px; left: 40px; z-index: 1; }
@@ -87,6 +99,19 @@ function Slide1() {
         .slide1-logo {
           width: 100px;
           max-width: 22vw;
+        }
+        .slide1-down-arrow {
+          position: absolute;
+          left: 50%;
+          bottom: 60px;
+          transform: translateX(-50%);
+          z-index: 12;
+          animation: arrow-bounce 1.5s infinite;
+          filter: drop-shadow(0 0 12px #42c8ee);
+        }
+        @keyframes arrow-bounce {
+          0%, 100% { transform: translateX(-50%) translateY(0); }
+          50% { transform: translateX(-50%) translateY(16px); }
         }
         @media (max-width: 900px) {
           .slide1-title { font-size: 7vw; }

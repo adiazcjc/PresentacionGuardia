@@ -5,15 +5,6 @@ function Particle() {
   return (
     <Particles
       id="tsparticles"
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: 1,
-        pointerEvents: "none"
-      }}
       params={{
         particles: {
           number: {
@@ -82,10 +73,12 @@ function Particle() {
           detect_on: "canvas",
           events: {
             onhover: {
-              enable: false
+              enable: true,
+              mode: "grab"
             },
             onclick: {
-              enable: false
+              enable: true,
+              mode: "push"
             },
             resize: true
           },
