@@ -24,6 +24,9 @@ function Home() {
       <Slide direction="up" triggerOnce><Slide6 /></Slide>
       <Slide direction="up" triggerOnce><Slide7 /></Slide>
       <Slide direction="up" triggerOnce><Slide8 /></Slide>
+      <Slide direction="up" triggerOnce><Slide9 /></Slide>
+      <Slide direction="up" triggerOnce><Slide10 /></Slide>
+      <Slide direction="up" triggerOnce><Slide11 /></Slide>
     </section>
   );
 }

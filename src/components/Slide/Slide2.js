@@ -28,47 +28,41 @@ function Slide2() {
   return (
     <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
       <Particle />
-      <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh", maxWidth: 900 }}>
-        {/* Línea decorativa neón */}
-        <div style={{ width: 180, height: 6, background: "linear-gradient(90deg, #42c8ee 0%, #fff 100%)", borderRadius: 8, marginBottom: 18, boxShadow: "0 0 18px #42c8ee" }} />
-        {/* Título con efecto typewriter */}
-        <div style={{ marginBottom: "1.2rem" }}>
-          <span style={{ fontSize: "1.5em", fontWeight: 700, color: "#42c8ee", textShadow: "0 0 18px #42c8ee, 0 0 2px #fff", letterSpacing: 2, textTransform: "uppercase" }}>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("AGENDA")
-                  .start();
-              }}
-            />
-          </span>
+      <Container className="d-flex flex-column align-items-center justify-content-center slide2-content" style={{ minHeight: "100vh", maxWidth: 900 }}>
+        {/* Contenedor alineado al cuadro para línea y título */}
+        <div className="slide2-header-center slide2-padding-x">
+          <div className="slide2-header-inner">
+            <div className="slide2-line slide2-line-top" />
+            <div className="slide2-title-box">
+              <span className="slide2-title">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString("Agenda")
+                      .start();
+                  }}
+                />
+              </span>
+            </div>
+          </div>
         </div>
         {/* Lista futurista animada en dos columnas */}
         <Slide direction="up" triggerOnce>
-          <div style={{
-            background: "rgba(11, 10, 20, 0.85)",
-            borderRadius: 18,
-            boxShadow: "0 0 32px #42c8ee99, 0 0 8px #0b0a14",
-            border: "2px solid #42c8ee",
-            padding: "2rem 2.5rem",
-            width: "100%",
-            maxWidth: 700,
-            margin: "0 auto"
-          }}>
-            <div style={{ display: "flex", justifyContent: "space-between", gap: 40 }}>
-              <ol style={{ listStyle: "decimal", paddingLeft: 24, margin: 0, flex: 1, color: "#fff", fontSize: "1.15em", fontWeight: 500, textShadow: "0 2px 8px #0b0a15", textAlign: "left" }}>
+          <div className="slide2-agenda-box slide2-padding-x">
+            <div className="slide2-agenda-cols">
+              <ol className="slide2-agenda-list">
                 {col1.map((item, idx) => (
-                  <li key={idx} style={{ margin: "1.1em 0", textAlign: "left", position: "relative" }}>
-                    <span style={{ color: "#42c8ee", position: "absolute", left: -32, minWidth: 28, textAlign: "right", fontWeight: 700 }}>{idx + 1}.</span>
-                    <span style={{ marginLeft: 12 }}>{item}</span>
+                  <li key={idx} className="slide2-agenda-item">
+                    <span className="slide2-agenda-num">{idx + 1}.</span>
+                    <span className="slide2-agenda-text">{item}</span>
                   </li>
                 ))}
               </ol>
-              <ol start={col1.length + 1} style={{ listStyle: "decimal", paddingLeft: 24, margin: 0, flex: 1, color: "#fff", fontSize: "1.15em", fontWeight: 500, textShadow: "0 2px 8px #0b0a15", textAlign: "left" }}>
+              <ol start={col1.length + 1} className="slide2-agenda-list">
                 {col2.map((item, idx) => (
-                  <li key={idx} style={{ margin: "1.1em 0", textAlign: "left", position: "relative" }}>
-                    <span style={{ color: "#42c8ee", position: "absolute", left: -32, minWidth: 28, textAlign: "right", fontWeight: 700 }}>{col1.length + idx + 1}.</span>
-                    <span style={{ marginLeft: 12 }}>{item}</span>
+                  <li key={idx} className="slide2-agenda-item">
+                    <span className="slide2-agenda-num">{col1.length + idx + 1}.</span>
+                    <span className="slide2-agenda-text">{item}</span>
                   </li>
                 ))}
               </ol>
@@ -76,7 +70,132 @@ function Slide2() {
           </div>
         </Slide>
         {/* Línea decorativa neón */}
-        <div style={{ width: 180, height: 6, background: "linear-gradient(90deg, #fff 0%, #42c8ee 100%)", borderRadius: 8, marginTop: 18, boxShadow: "0 0 18px #42c8ee" }} />
+        <div className="slide2-line slide2-line-bottom" />
+        <style>{`
+          .slide2-padding-x {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+          }
+          .slide2-header-center {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .slide2-header-inner {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .slide2-content { min-height: 100vh; max-width: 900px; }
+          .slide2-title-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5em;
+            margin-top: 0.7em;
+            z-index: 3;
+            position: relative;
+          }
+          .slide2-title {
+            font-size: 2.1em;
+            font-weight: 700;
+            color: #42c8ee;
+            text-shadow: 0 0 8px #42c8ee, 0 0 2px #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: transparent;
+            padding: 0 0.5em;
+          }
+          .slide2-line {
+            width: 180px;
+            height: 6px;
+            border-radius: 8px;
+            box-shadow: 0 0 18px #42c8ee;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #42c8ee 0%, #fff 100%);
+            z-index: 4;
+            position: relative;
+          }
+          .slide2-line-bottom {
+            margin-top: 18px;
+            margin-bottom: 0;
+            background: linear-gradient(90deg, #fff 0%, #42c8ee 100%);
+          }
+          .slide2-agenda-box {
+            background: rgba(11, 10, 20, 0.85);
+            border-radius: 18px;
+            box-shadow: 0 0 32px #42c8ee99, 0 0 8px #0b0a14;
+            border: 2px solid #42c8ee;
+            padding: 2rem 2.5rem;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 1.2em;
+          }
+          .slide2-agenda-cols {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+          }
+          .slide2-agenda-list {
+            list-style: decimal;
+            padding-left: 24px;
+            margin: 0;
+            flex: 1;
+            color: #fff;
+            font-size: 1.15em;
+            font-weight: 500;
+            text-shadow: 0 2px 8px #0b0a15;
+            text-align: left;
+          }
+          .slide2-agenda-item {
+            margin: 1.1em 0;
+            text-align: left;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+          }
+          .slide2-agenda-num {
+            color: #42c8ee;
+            min-width: 28px;
+            text-align: right;
+            font-weight: 700;
+            margin-right: 12px;
+            flex-shrink: 0;
+          }
+          .slide2-agenda-text {
+            margin-left: 0;
+          }
+          @media (max-width: 700px) {
+            .slide2-header-center { max-width: 98vw; }
+            .slide2-padding-x {
+              padding-left: 0.7rem;
+              padding-right: 0.7rem;
+            }
+            .slide2-agenda-box {
+              padding-top: 1.2rem;
+              padding-bottom: 1.2rem;
+              max-width: 98vw;
+              margin-top: 1.5em;
+            }
+            .slide2-agenda-cols {
+              flex-direction: column;
+              gap: 0;
+            }
+            .slide2-agenda-list {
+              font-size: 1em;
+              padding-left: 20px;
+            }
+            .slide2-title { font-size: 1.1em; text-shadow: 0 0 4px #42c8ee, 0 0 1px #fff; }
+            .slide2-line { width: 110px; height: 4px; }
+          }
+        `}</style>
       </Container>
     </Container>
   );

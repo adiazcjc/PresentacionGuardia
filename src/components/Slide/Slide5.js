@@ -7,88 +7,95 @@ import "../../styles/slide.css";
 
 function Slide5() {
   return (
-    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
+    <Container
+      fluid
+      className="home-about-section d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100vh" }}
+    >
       <Particle />
-      <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh", maxWidth: 900 }}>
-        <div style={{ marginBottom: "1.2rem" }}>
-          <span style={{ fontSize: "1.2em", fontWeight: 600, color: "#42c8ee", textShadow: "0 0 10px #42c8ee, 0 0 1px #fff", letterSpacing: 1 }}>
+      <Container
+        className="d-flex flex-column align-items-center justify-content-center"
+        style={{ minHeight: "100vh", maxWidth: 1400 }}
+      >
+        {/* Título ajustado */}
+        <div style={{ marginBottom: "2rem" }}>
+          <span
+            style={{
+              fontSize: "2em",
+              fontWeight: 600,
+              color: "#42c8ee",
+              textShadow: "0 0 10px #42c8ee",
+              letterSpacing: 2
+            }}
+          >
             <Typewriter
               onInit={(typewriter) => {
-                typewriter
-                  .typeString("Arquitectura actual")
-                  .start();
+                typewriter.typeString("Arquitectura actual").start();
               }}
             />
           </span>
         </div>
+
+        {/* Contenedor Slide con SVG centrado y limpio */}
         <Slide direction="up" triggerOnce>
-          <div style={{
-            background: "rgba(11, 10, 20, 0.85)",
-            borderRadius: 18,
-            boxShadow: "0 0 32px #42c8ee99, 0 0 8px #0b0a14",
-            border: "2px solid #42c8ee",
-            padding: "2.5rem 2.5rem 2rem 2.5rem",
-            width: "100%",
-            maxWidth: 700,
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center"
-          }}>
-            {/* Diagrama SVG puro */}
-            <svg width="600" height="340" style={{ maxWidth: "100%" }}>
-              {/* Bloque App Sensores */}
-              <rect x="30" y="40" width="160" height="110" rx="16" fill="none" stroke="#42c8ee" strokeWidth="3" />
-              <text x="110" y="75" textAnchor="middle" fill="#fff" fontSize="1.25em" fontWeight="bold">C# App</text>
-              <text x="110" y="100" textAnchor="middle" fill="#fff" fontSize="1.25em" fontWeight="bold">Sensores</text>
-              {/* Icono monitor */}
-              <rect x="80" y="110" width="60" height="22" rx="4" fill="none" stroke="#42c8ee" strokeWidth="2" />
-              <rect x="100" y="130" width="20" height="3" rx="1.5" fill="#42c8ee" />
-              <text x="110" y="145" textAnchor="middle" fill="#fff" fontSize="1em">SQL Server</text>
+          <div
+            style={{
+              background: "rgba(11, 10, 20, 0.85)",
+              borderRadius: 20,
+              boxShadow: "0 0 24px #42c8ee99",
+              border: "2px solid #42c8ee",
+              padding: "2.5rem",
+              width: "100%",
+              maxWidth: 1000,
+              margin: "0 auto",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center"
+            }}
+          >
+            <svg viewBox="0 0 1200 600" width="100%" height="auto">
+              {/* Caja Sensores */}
+              <rect x="60" y="120" width="250" height="160" rx="18" fill="none" stroke="#42c8ee" strokeWidth="4" />
+              <text x="185" y="170" textAnchor="middle" fill="#fff" fontSize="2.2em" fontWeight="bold">C# App</text>
+              <text x="185" y="205" textAnchor="middle" fill="#fff" fontSize="2.2em" fontWeight="bold">Sensores</text>
+              <rect x="110" y="230" width="150" height="30" rx="6" fill="none" stroke="#42c8ee" strokeWidth="2" />
+              <rect x="160" y="260" width="50" height="6" rx="3" fill="#42c8ee" />
+              <text x="185" y="285" textAnchor="middle" fill="#fff" fontSize="1.5em">SQL Server</text>
 
-              {/* Bloque Dashboard */}
-              <rect x="410" y="40" width="160" height="110" rx="16" fill="none" stroke="#42c8ee" strokeWidth="3" />
-              <text x="490" y="75" textAnchor="middle" fill="#fff" fontSize="1.25em" fontWeight="bold">React</text>
-              <text x="490" y="100" textAnchor="middle" fill="#fff" fontSize="1.25em" fontWeight="bold">Dashboard</text>
-              {/* Icono dashboard */}
-              <rect x="460" y="110" width="60" height="22" rx="4" fill="none" stroke="#42c8ee" strokeWidth="2" />
-              <rect x="470" y="120" width="10" height="8" fill="#42c8ee" />
-              <rect x="485" y="115" width="10" height="13" fill="#42c8ee" />
-              <rect x="500" y="125" width="10" height="3" fill="#42c8ee" />
+              {/* SQL Server (cilindro) */}
+              <ellipse cx="460" cy="300" rx="60" ry="30" fill="none" stroke="#42c8ee" strokeWidth="4" />
+              <rect x="400" y="300" width="120" height="90" rx="20" fill="none" stroke="#42c8ee" strokeWidth="4" />
+              <ellipse cx="460" cy="390" rx="60" ry="30" fill="none" stroke="#42c8ee" strokeWidth="4" />
+              <text x="460" y="350" textAnchor="middle" fill="#fff" fontSize="2em" fontWeight="bold">SQL Server</text>
 
-              {/* Bloque SQL Server (cilindro) */}
-              <ellipse cx="310" cy="150" rx="32" ry="18" fill="none" stroke="#42c8ee" strokeWidth="3" />
-              <rect x="278" y="150" width="64" height="40" rx="16" fill="none" stroke="#42c8ee" strokeWidth="3" />
-              <ellipse cx="310" cy="190" rx="32" ry="18" fill="none" stroke="#42c8ee" strokeWidth="3" />
-              <text x="310" y="175" textAnchor="middle" fill="#fff" fontSize="1.1em" fontWeight="bold">SQL Server</text>
+              {/* Caja Dashboard */}
+              <rect x="880" y="120" width="250" height="160" rx="18" fill="none" stroke="#42c8ee" strokeWidth="4" />
+              <text x="1005" y="170" textAnchor="middle" fill="#fff" fontSize="2.2em" fontWeight="bold">React</text>
+              <text x="1005" y="205" textAnchor="middle" fill="#fff" fontSize="2.2em" fontWeight="bold">Dashboard</text>
+              <rect x="940" y="230" width="130" height="30" rx="6" fill="none" stroke="#42c8ee" strokeWidth="2" />
+              <rect x="960" y="245" width="24" height="12" fill="#42c8ee" />
+              <rect x="1000" y="240" width="24" height="24" fill="#42c8ee" />
+              <rect x="1040" y="258" width="24" height="6" fill="#42c8ee" />
 
-              {/* Flecha SELECT */}
-              <line x1="190" y1="95" x2="278" y2="95" stroke="#42c8ee" strokeWidth="3" markerEnd="url(#arrowhead)" />
-              <line x1="342" y1="95" x2="410" y2="95" stroke="#42c8ee" strokeWidth="3" markerEnd="url(#arrowhead)" />
-              <text x="310" y="85" textAnchor="middle" fill="#fff" fontSize="1em" fontWeight="bold">SELECT</text>
+              {/* Flechas */}
+              <line x1="310" y1="180" x2="880" y2="180" stroke="#42c8ee" strokeWidth="4" markerEnd="url(#arrowhead)" />
+              <text x="600" y="160" textAnchor="middle" fill="#fff" fontSize="1.8em">SELECT</text>
 
-              {/* Flecha App Sensores -> SQL Server */}
-              <line x1="110" y1="150" x2="278" y2="150" stroke="#42c8ee" strokeWidth="3" markerEnd="url(#arrowhead)" />
+              <line x1="185" y1="285" x2="400" y2="320" stroke="#42c8ee" strokeWidth="4" markerEnd="url(#arrowhead)" />
+              <line x1="520" y1="320" x2="880" y2="250" stroke="#42c8ee" strokeWidth="4" markerEnd="url(#arrowhead)" />
+              <path d="M 460 390 Q 460 500 1120 500" stroke="#42c8ee" strokeWidth="4" fill="none" markerEnd="url(#arrowhead)" />
+              <text x="790" y="485" textAnchor="middle" fill="#fff" fontSize="1.8em">Incidente</text>
+              <line x1="1005" y1="290" x2="1005" y2="440" stroke="#42c8ee" strokeWidth="4" markerEnd="url(#arrowhead)" />
 
-              {/* Flecha SQL Server -> Dashboard */}
-              <line x1="342" y1="150" x2="410" y2="150" stroke="#42c8ee" strokeWidth="3" markerEnd="url(#arrowhead)" />
+              {/* Operador */}
+              <circle cx="1005" cy="480" r="35" fill="none" stroke="#42c8ee" strokeWidth="4" />
+              <rect x="975" y="520" width="60" height="16" rx="8" fill="#42c8ee" />
+              <text x="1005" y="550" textAnchor="middle" fill="#fff" fontSize="2em" fontWeight="bold">Operador</text>
 
-              {/* Flecha Incidente */}
-              <path d="M 310 190 Q 310 260 570 260" stroke="#42c8ee" strokeWidth="3" fill="none" markerEnd="url(#arrowhead)" />
-              <text x="400" y="250" textAnchor="middle" fill="#fff" fontSize="1em" fontWeight="bold">Incidente</text>
-
-              {/* Flecha Dashboard -> Operador */}
-              <line x1="490" y1="150" x2="490" y2="250" stroke="#42c8ee" strokeWidth="3" markerEnd="url(#arrowhead)" />
-
-              {/* Bloque Operador (icono persona) */}
-              <circle cx="490" cy="280" r="18" fill="none" stroke="#42c8ee" strokeWidth="3" />
-              <rect x="478" y="298" width="24" height="10" rx="5" fill="#42c8ee" />
-              <text x="490" y="330" textAnchor="middle" fill="#fff" fontSize="1.1em" fontWeight="bold">Operador</text>
-
-              {/* Definición de flecha */}
+              {/* Flecha definiciones */}
               <defs>
-                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-                  <polygon points="0 0, 10 3.5, 0 7" fill="#42c8ee" />
+                <marker id="arrowhead" markerWidth="12" markerHeight="10" refX="12" refY="5" orient="auto">
+                  <polygon points="0 0, 12 5, 0 10, 3 5" fill="#42c8ee" />
                 </marker>
               </defs>
             </svg>

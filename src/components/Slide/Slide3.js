@@ -9,8 +9,8 @@ function Slide3() {
     <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
       <Particle />
       <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh", maxWidth: 700 }}>
-        <div style={{ marginBottom: "1.2rem" }}>
-          <span style={{ fontSize: "1.2em", fontWeight: 600, color: "#42c8ee", textShadow: "0 0 10px #42c8ee, 0 0 1px #fff", letterSpacing: 1 }}>
+        <div className="slide3-title-box">
+          <span className="slide3-title">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
@@ -20,12 +20,12 @@ function Slide3() {
             />
           </span>
         </div>
-        <div className="futuristic-table-wrapper futuristic-table-animated" style={{ padding: "1.2rem 0.7rem", maxWidth: 600 }}>
-          <table className="futuristic-table" style={{ fontSize: "0.98em" }}>
+        <div className="futuristic-table-wrapper futuristic-table-animated slide3-table-wrapper">
+          <table className="futuristic-table slide3-table">
             <thead>
               <tr>
-                <th style={{ fontSize: "1em" }}>Dimensión</th>
-                <th style={{ fontSize: "1em" }}>Detalle</th>
+                <th>Dimensión</th>
+                <th>Detalle</th>
               </tr>
             </thead>
             <tbody>
@@ -48,6 +48,52 @@ function Slide3() {
             </tbody>
           </table>
         </div>
+        <style>{`
+          .slide3-title-box {
+            margin-bottom: 1.2rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+          .slide3-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #42c8ee;
+            text-shadow: 0 0 10px #42c8ee, 0 0 1px #fff;
+            letter-spacing: 1px;
+            text-align: center;
+          }
+          .slide3-table-wrapper {
+            padding: 1.2rem 0.7rem;
+            max-width: 600px;
+            width: 100%;
+            overflow-x: auto;
+          }
+          .slide3-table {
+            width: 100%;
+            min-width: 340px;
+            font-size: 0.98em;
+            border-collapse: collapse;
+          }
+          .slide3-table th, .slide3-table td {
+            padding: 0.7em 0.5em;
+            text-align: left;
+            white-space: pre-line;
+          }
+          @media (max-width: 700px) {
+            .slide3-title {
+              font-size: 1em;
+            }
+            .slide3-table-wrapper {
+              padding: 0.7rem 0.2rem;
+              max-width: 99vw;
+            }
+            .slide3-table {
+              font-size: 0.95em;
+              min-width: 260px;
+            }
+          }
+        `}</style>
       </Container>
     </Container>
   );
