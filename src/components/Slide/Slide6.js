@@ -1,127 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
+import flujo from "../../assets/flujo.png";
 
-const steps = [
-  {
-    icon: (
-      // Monitor con alerta
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <rect
-          x="6"
-          y="10"
-          width="36"
-          height="22"
-          rx="4"
-          stroke="#42c8ee"
-          strokeWidth="2.5"
-        />
-        <rect x="18" y="36" width="12" height="3" rx="1.5" fill="#42c8ee" />
-        <polygon
-          points="24,16 30,28 18,28"
-          stroke="#42c8ee"
-          strokeWidth="2"
-          fill="none"
-        />
-        <line
-          x1="24"
-          y1="20"
-          x2="24"
-          y2="24"
-          stroke="#42c8ee"
-          strokeWidth="2"
-        />
-        <circle cx="24" cy="26" r="1.2" fill="#42c8ee" />
-      </svg>
-    ),
-    text: "Sonda (p.ej. ping SRV-WEB01) falla.",
-  },
-  {
-    icon: (
-      // Alerta
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <rect
-          x="12"
-          y="12"
-          width="24"
-          height="24"
-          rx="6"
-          stroke="#42c8ee"
-          strokeWidth="2.5"
-        />
-        <polygon
-          points="24,18 30,32 18,32"
-          stroke="#42c8ee"
-          strokeWidth="2"
-          fill="none"
-        />
-        <line
-          x1="24"
-          y1="22"
-          x2="24"
-          y2="28"
-          stroke="#42c8ee"
-          strokeWidth="2"
-        />
-        <circle cx="24" cy="30" r="1.2" fill="#42c8ee" />
-      </svg>
-    ),
-    text: "App registra evento y muestra alerta.",
-  },
-  {
-    icon: (
-      // Operador (headset)
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="16" stroke="#42c8ee" strokeWidth="2.5" />
-        <path
-          d="M16 32c0-4 8-4 8 0"
-          stroke="#42c8ee"
-          strokeWidth="2"
-          fill="none"
-        />
-        <path
-          d="M32 32v-2a4 4 0 0 0-4-4h-8a4 4 0 0 0-4 4v2"
-          stroke="#42c8ee"
-          strokeWidth="2"
-          fill="none"
-        />
-        <circle
-          cx="24"
-          cy="20"
-          r="4"
-          stroke="#42c8ee"
-          strokeWidth="2"
-          fill="none"
-        />
-      </svg>
-    ),
-    text: "Operador verifica y escala.",
-  },
-  {
-    icon: (
-      // Checklist
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <rect
-          x="12"
-          y="8"
-          width="24"
-          height="32"
-          rx="6"
-          stroke="#42c8ee"
-          strokeWidth="2.5"
-        />
-        <polyline
-          points="18,22 22,26 30,18"
-          stroke="#42c8ee"
-          strokeWidth="2.5"
-          fill="none"
-        />
-        <rect x="18" y="30" width="12" height="2.5" rx="1.2" fill="#42c8ee" />
-      </svg>
-    ),
-    text: "Seguimiento manual hasta cierre.",
-  },
-];
+
 
 function Slide6() {
   return (
@@ -141,33 +23,7 @@ function Slide6() {
 
         <Slide direction="up" triggerOnce>
           <div className="slide6-steps-box mt-3">
-            {steps.map((step, idx) => (
-              <React.Fragment key={idx}>
-                <div className="slide6-step-row">
-                  <div className="slide6-step-iconblock">
-                    <div className="slide6-step-num">{idx + 1}</div>
-                    <div className="slide6-step-icon">{step.icon}</div>
-                  </div>
-                  <div className="slide6-step-text">{step.text}</div>
-                </div>
-                {idx < steps.length - 1 && (
-                  <div className="slide6-arrow-container">
-                    <svg width="24" height="48" viewBox="0 0 24 48" fill="none">
-                      <line
-                        x1="12"
-                        y1="0"
-                        x2="12"
-                        y2="38"
-                        stroke="#42c8ee"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                      />
-                      <polygon points="12,48 4,36 20,36" fill="#42c8ee" />
-                    </svg>
-                  </div>
-                )}
-              </React.Fragment>
-            ))}
+            <img src={flujo} alt="Flujo" className="slide6-flujo" />
           </div>
         </Slide>
         <div className="slide2-line slide2-line-bottom" />
