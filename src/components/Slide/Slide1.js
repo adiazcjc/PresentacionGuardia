@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import logo from "../../assets/logonavbar.png";
 import { MdMemory } from "react-icons/md";
 
-function Slide1() {
+function Slide1({ onNavigate }) {
   return (
     <section style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}>
      
@@ -31,16 +31,16 @@ function Slide1() {
             Arquitectura actual y evolución a n8n + IA
           </span>
         </div>
-        <div className="slide1-down-arrow" style={{marginTop: "-50%"}}>
-        <svg width="56" height="32" viewBox="0 0 56 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polyline points="8,8 28,28 48,8" stroke="#42c8ee" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
-          <defs>
-            <filter id="glow" x="0" y="0" width="56" height="32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-              <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#42c8ee"/>
-            </filter>
-          </defs>
-        </svg>
-      </div>
+        <div className="slide1-down-arrow" onClick={() => onNavigate && onNavigate(2)} style={{ cursor: 'pointer' }}>
+          <svg width="56" height="32" viewBox="0 0 56 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="8,8 28,28 48,8" stroke="#42c8ee" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
+            <defs>
+              <filter id="glow" x="0" y="0" width="56" height="32" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#42c8ee"/>
+              </filter>
+            </defs>
+          </svg>
+        </div>
       </Container>
       {/* Logo Groovit en la esquina inferior derecha */}
       <div className="slide1-logo-box">
@@ -103,7 +103,7 @@ function Slide1() {
         .slide1-down-arrow {
           position: absolute;
           left: 50%;
-          bottom: 60px;
+          bottom: 120px;
           transform: translateX(-50%);
           z-index: 12;
           animation: arrow-bounce 1.5s infinite;

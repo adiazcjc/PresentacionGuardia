@@ -29,7 +29,7 @@ function Home() {
 
   return (
     <section ref={containerRef} style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}>
-      <Slide1 />
+      <Slide1 onNavigate={handleNavigate} />
       <Slide direction="up" triggerOnce>
         <Slide2 onNavigate={handleNavigate} />
       </Slide>

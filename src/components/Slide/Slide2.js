@@ -34,6 +34,7 @@ function Slide2({ onNavigate }) {
       fluid
       className="home-about-section d-flex align-items-center justify-content-center"
       style={{ minHeight: "100vh" }}
+      id="slide2"
     >
       <Container
         className="d-flex flex-column align-items-center justify-content-center slide2-content"
