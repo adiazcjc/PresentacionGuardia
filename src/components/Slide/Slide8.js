@@ -1,25 +1,16 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Particle from "../Particle";
-import Typewriter from "typewriter-effect";
 import { Slide } from "react-awesome-reveal";
 
 function Slide8() {
   return (
-    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-      <Particle />
+    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
+    id="slide8">
+      
       <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh", maxWidth: 1200 }}>
-        <div style={{ marginBottom: "1.2rem" }}>
-          <span style={{ fontSize: "1.5em", fontWeight: 700, color: "#42c8ee", textShadow: "0 0 18px #42c8ee, 0 0 2px #fff", letterSpacing: 2 }}>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Arquitectura Futura (Fase 1 – Sensores n8n)")
-                  .start();
-              }}
-            />
-          </span>
-        </div>
+      <Slide direction="up" triggerOnce>
+        <h1 className="slide1-title">Arquitectura Futura (Fase 1 – Sensores n8n)</h1>
+      </Slide>
         <Slide direction="up" triggerOnce>
           <div style={{
             background: "rgba(11, 10, 20, 0.85)",
@@ -33,7 +24,8 @@ function Slide8() {
             display: "flex",
             flexDirection: "row",
             alignItems: "flex-start",
-            gap: 36
+            gap: 36,
+            marginTop: "2rem"
           }}>
             {/* Diagrama principal */}
             <div style={{ flex: 2, minWidth: 600, display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -112,6 +104,7 @@ function Slide8() {
             </ul>
           </div>
         </Slide>
+        <div className="slide2-line slide2-line-bottom" /> 
       </Container>
     </Container>
   );

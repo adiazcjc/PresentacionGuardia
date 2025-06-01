@@ -1,7 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Particle from "../Particle";
-import Typewriter from "typewriter-effect";
 import { Slide } from "react-awesome-reveal";
 
 const data = [
@@ -13,21 +11,14 @@ const data = [
 
 function Slide11() {
   return (
-    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-      <Particle />
+    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
+    id="slide11">
+   
       <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh", maxWidth: 900 }}>
-        <div style={{ marginBottom: "1.2rem" }}>
-          <span style={{ fontSize: "1.5em", fontWeight: 700, color: "#42c8ee", textShadow: "0 0 18px #42c8ee, 0 0 2px #fff", letterSpacing: 2 }}>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("ROADMAP DE IMPLEMENTACIÓN")
-                  .start();
-              }}
-            />
-          </span>
-        </div>
-        <Slide direction="up" triggerOnce>
+      <Slide direction="up" triggerOnce>
+        <h1 className="slide1-title">Roadmap de implementación</h1>
+      </Slide>
+      <Slide direction="up" triggerOnce>
           <div style={{
             background: "rgba(11, 10, 20, 0.85)",
             borderRadius: 18,
@@ -39,7 +30,8 @@ function Slide11() {
             margin: "0 auto",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center"
+            alignItems: "center",
+            marginTop: "2rem"
           }}>
             <table style={{
               width: "100%",
@@ -98,6 +90,7 @@ function Slide11() {
             </table>
           </div>
         </Slide>
+        <div className="slide2-line slide2-line-bottom" /> 
       </Container>
     </Container>
   );

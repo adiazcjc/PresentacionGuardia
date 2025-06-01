@@ -1,26 +1,19 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Typewriter from "typewriter-effect";
-import Particle from "../Particle";
 import "../../styles/slide.css";
+import { Slide } from "react-awesome-reveal";
 
 function Slide3() {
   return (
-    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-      <Particle />
+    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
+    id="slide3">
+    
       <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh", maxWidth: 700 }}>
-        <div className="slide3-title-box">
-          <span className="slide3-title">
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Panorama del servicio")
-                  .start();
-              }}
-            />
-          </span>
-        </div>
-        <div className="futuristic-table-wrapper futuristic-table-animated slide3-table-wrapper">
+      <Slide direction="up" triggerOnce>
+        <h1 className="slide1-title">Panorama del servicio </h1>
+      </Slide>
+      <Slide direction="up" triggerOnce>
+        <div className="futuristic-table-wrapper futuristic-table-animated slide3-table-wrapper mt-3">
           <table className="futuristic-table slide3-table">
             <thead>
               <tr>
@@ -48,6 +41,8 @@ function Slide3() {
             </tbody>
           </table>
         </div>
+        </Slide>
+        <div className="slide2-line slide2-line-bottom" /> 
         <style>{`
           .slide3-title-box {
             margin-bottom: 1.2rem;

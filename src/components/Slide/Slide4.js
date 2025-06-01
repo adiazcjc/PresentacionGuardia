@@ -1,28 +1,21 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Particle from "../Particle";
-import Typewriter from "typewriter-effect";
 import { MdSensors, MdDashboard } from "react-icons/md";
 import { FaUserFriends } from "react-icons/fa";
 import "../../styles/slide.css";
+import { Slide } from "react-awesome-reveal";
 
 function Slide4() {
   return (
-    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
-      <Particle />
+    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
+    id="slide4">
+    
       <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh", maxWidth: 700 }}>
-        <div style={{ marginBottom: "1.2rem" }}>
-          <span style={{ fontSize: "1.2em", fontWeight: 600, color: "#42c8ee", textShadow: "0 0 10px #42c8ee, 0 0 1px #fff", letterSpacing: 1 }}>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Componentes actuales")
-                  .start();
-              }}
-            />
-          </span>
-        </div>
-        <div className="futuristic-table-wrapper futuristic-table-animated" style={{ padding: "1.2rem 0.7rem", maxWidth: 600 }}>
+      <Slide direction="up" triggerOnce>
+        <h1 className="slide1-title">Componentes actuales </h1>
+      </Slide>
+      <Slide direction="up" triggerOnce>
+        <div className="futuristic-table-wrapper futuristic-table-animated mt-3" style={{ padding: "1.2rem 0.7rem", maxWidth: 600 }}>
           <table className="futuristic-table" style={{ fontSize: "0.98em" }}>
             <thead>
               <tr>
@@ -60,6 +53,8 @@ function Slide4() {
             </tbody>
           </table>
         </div>
+        </Slide>
+        <div className="slide2-line slide2-line-bottom" /> 
       </Container>
     </Container>
   );

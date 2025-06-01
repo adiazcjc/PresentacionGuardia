@@ -1,13 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Particle from "../Particle";
 import logo from "../../assets/logonavbar.png";
 import { MdMemory } from "react-icons/md";
 
 function Slide1() {
   return (
     <section style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}>
-      <Particle />
+     
       {/* Hexágonos decorativos SVG */}
       <svg className="hex-svg hex-svg-1" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
         <polygon points="60,20 90,35 90,65 60,80 30,65 30,35" stroke="#42c8ee" strokeWidth="3" fill="none"/>
