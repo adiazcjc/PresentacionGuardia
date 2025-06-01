@@ -9,7 +9,7 @@ function Slide1({ onNavigate }) {
      
       {/* Hexágonos decorativos SVG */}
       <svg className="hex-svg hex-svg-1" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="60,20 90,35 90,65 60,80 30,65 30,35" stroke="#42c8ee" strokeWidth="3" fill="none"/>
+       
         <polygon points="200,60 230,75 230,105 200,120 170,105 170,75" stroke="#42c8ee" strokeWidth="3" fill="none"/>
       </svg>
       <svg className="hex-svg hex-svg-2" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
