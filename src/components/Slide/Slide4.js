@@ -15,8 +15,8 @@ function Slide4() {
         <h1 className="slide1-title">Componentes actuales </h1>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div className="futuristic-table-wrapper futuristic-table-animated mt-3" style={{ padding: "1.2rem 0.7rem", maxWidth: 600 }}>
-          <table className="futuristic-table" style={{ fontSize: "0.98em" }}>
+        <div className="futuristic-table-wrapper futuristic-table-animated mt-3 slide4-table-wrapper" style={{ padding: "1.2rem 0.7rem", maxWidth: 600 }}>
+          <table className="futuristic-table slide4-table" style={{ fontSize: "0.98em" }}>
             <thead>
               <tr>
                 <th style={{ fontSize: "1em" }}>#</th>
@@ -55,6 +55,37 @@ function Slide4() {
         </div>
         </Slide>
         <div className="slide2-line slide2-line-bottom" /> 
+        <style>{`
+          .slide4-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            max-width: 600px;
+          }
+          .slide4-table {
+            width: 100%;
+            min-width: 340px;
+            font-size: 0.98em;
+            border-collapse: collapse;
+          }
+          .slide4-table th, .slide4-table td {
+            padding: 0.7em 0.5em;
+            text-align: left;
+            white-space: pre-line;
+          }
+          @media (max-width: 700px) {
+            .slide4-table-wrapper {
+              padding: 0.7rem 0.2rem;
+              max-width: 99vw;
+            }
+            .slide4-table {
+              font-size: 0.95em;
+              min-width: 260px;
+            }
+            .slide4-table th, .slide4-table td {
+              padding: 0.5em 0.3em;
+            }
+          }
+        `}</style>
       </Container>
     </Container>
   );

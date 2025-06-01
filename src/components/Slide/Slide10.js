@@ -18,66 +18,14 @@ function Slide10() {
         <h1 className="slide1-title">Impacto en personal & costos</h1>
       </Slide>
         <Slide direction="up" triggerOnce>
-          <div style={{
-            background: "rgba(11, 10, 20, 0.85)",
-            borderRadius: 18,
-            boxShadow: "0 0 32px #42c8ee99, 0 0 8px #0b0a14",
-            border: "2px solid #42c8ee",
-            padding: "2.5rem 2.5rem 2rem 2.5rem",
-            width: "100%",
-            maxWidth: 800,
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            marginTop: "2rem"
-          }}>
-            <table style={{
-              width: "100%",
-              borderCollapse: "collapse",
-              fontSize: "1.18em",
-              color: "#fff",
-              boxShadow: "0 0 12px #42c8ee55"
-            }}>
+          <div className="futuristic-table-wrapper futuristic-table-animated mt-3 slide10-table-wrapper" style={{ padding: "1.2rem 0.7rem", maxWidth: 800 }}>
+            <table className="futuristic-table slide10-table" style={{ fontSize: "0.98em" }}>
               <thead>
                 <tr>
-                  <th style={{
-                    borderBottom: "3px solid #42c8ee",
-                    color: "#42c8ee",
-                    fontWeight: 700,
-                    fontSize: "1.18em",
-                    padding: "0.7em 0.5em",
-                    background: "rgba(11, 10, 20, 0.7)",
-                    letterSpacing: 1,
-                    textAlign: "left"
-                  }}>Métrica</th>
-                  <th style={{
-                    borderBottom: "3px solid #42c8ee",
-                    color: "#fff",
-                    fontWeight: 700,
-                    fontSize: "1.18em",
-                    padding: "0.7em 0.5em",
-                    background: "rgba(11, 10, 20, 0.7)",
-                    letterSpacing: 1
-                  }}>Actual</th>
-                  <th style={{
-                    borderBottom: "3px solid #42c8ee",
-                    color: "#fff",
-                    fontWeight: 700,
-                    fontSize: "1.18em",
-                    padding: "0.7em 0.5em",
-                    background: "rgba(11, 10, 20, 0.7)",
-                    letterSpacing: 1
-                  }}>Con flujos n8n<br/>+ IA</th>
-                  <th style={{
-                    borderBottom: "3px solid #42c8ee",
-                    color: "#fff",
-                    fontWeight: 700,
-                    fontSize: "1.18em",
-                    padding: "0.7em 0.5em",
-                    background: "rgba(11, 10, 20, 0.7)",
-                    letterSpacing: 1
-                  }}>Variación</th>
+                  <th style={{ fontSize: "1em", textAlign: "left" }}>Métrica</th>
+                  <th style={{ fontSize: "1em" }}>Actual</th>
+                  <th style={{ fontSize: "1em" }}>Con flujos n8n + IA</th>
+                  <th style={{ fontSize: "1em" }}>Variación</th>
                 </tr>
               </thead>
               <tbody>
@@ -87,12 +35,9 @@ function Slide10() {
                       <td
                         key={j}
                         style={{
-                          borderBottom: i < data.length - 1 ? "2px solid #42c8ee55" : "2px solid #42c8ee",
-                          padding: "0.7em 0.5em",
                           textAlign: j === 0 ? "left" : "center",
                           fontWeight: j === 0 ? 700 : 500,
                           whiteSpace: "pre-line",
-                          background: i % 2 === 0 ? "rgba(66,200,238,0.04)" : "rgba(11,10,20,0.2)",
                           fontSize: "1.08em"
                         }}
                       >
@@ -104,32 +49,23 @@ function Slide10() {
                 {/* Fila ahorro anual */}
                 <tr>
                   <td style={{
-                    borderTop: "3px solid #42c8ee",
                     color: "#42c8ee",
                     fontWeight: 700,
                     fontSize: "1.13em",
-                    padding: "0.7em 0.5em",
-                    background: "rgba(11, 10, 20, 0.7)",
                     textAlign: "left"
                   }}>Ahorro anual</td>
                   <td style={{
-                    borderTop: "3px solid #42c8ee",
-                    background: "rgba(11, 10, 20, 0.7)",
                     fontWeight: 700,
                     fontSize: "1.13em",
                     textAlign: "center"
                   }}>-</td>
                   <td style={{
-                    borderTop: "3px solid #42c8ee",
-                    background: "rgba(11, 10, 20, 0.7)",
                     fontWeight: 700,
                     fontSize: "1.13em",
                     color: "#42c8ee",
                     textAlign: "center"
                   }}>≈ US$ 48 k</td>
                   <td style={{
-                    borderTop: "3px solid #42c8ee",
-                    background: "rgba(11, 10, 20, 0.7)",
                     fontWeight: 700,
                     fontSize: "1.13em",
                     textAlign: "center"
@@ -140,6 +76,53 @@ function Slide10() {
           </div>
         </Slide>
         <div className="slide2-line slide2-line-bottom" /> 
+        <style>{`
+          .slide10-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            max-width: 800px;
+          }
+          .slide10-table {
+            width: 100%;
+            min-width: 340px;
+            font-size: 0.98em;
+            border-collapse: collapse;
+          }
+          .slide10-table th, .slide10-table td {
+            padding: 0.7em 0.5em;
+            text-align: left;
+            white-space: pre-line;
+            border: none;
+          }
+          .slide10-table th {
+            font-size: 1em;
+            color: #42c8ee;
+            font-weight: 700;
+            background: rgba(11, 10, 20, 0.7);
+            letter-spacing: 1px;
+          }
+          .slide10-table tr {
+            transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+          }
+          .slide10-table tbody tr:hover {
+            background: rgba(66,200,238,0.13);
+            box-shadow: 0 0 10px #42c8ee55;
+            color: #42c8ee;
+          }
+          @media (max-width: 700px) {
+            .slide10-table-wrapper {
+              padding: 0.7rem 0.2rem;
+              max-width: 99vw;
+            }
+            .slide10-table {
+              font-size: 0.95em;
+              min-width: 260px;
+            }
+            .slide10-table th, .slide10-table td {
+              padding: 0.5em 0.3em;
+            }
+          }
+        `}</style>
       </Container>
     </Container>
   );
