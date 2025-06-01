@@ -29,7 +29,7 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Particle />
         
-        <ScrollToTop />
+     
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

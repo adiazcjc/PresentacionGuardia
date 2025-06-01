@@ -5,7 +5,7 @@ import { MdMemory } from "react-icons/md";
 
 function Slide1({ onNavigate }) {
   return (
-    <section style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}>
+    <section style={{ position: "relative", minHeight: "100vh", overflow: "hidden", marginTop: "-50px" }}>
      
       {/* Hexágonos decorativos SVG */}
       <svg className="hex-svg hex-svg-1" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
