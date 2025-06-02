@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
 import "../../styles/slide.css";
 import arquitectura from "../../assets/arquitectura.png";
+import Arqui from "../Diagramas/Arqui";
 
 function Slide5({ onNavigate }) {
   return (
@@ -23,7 +24,8 @@ function Slide5({ onNavigate }) {
           
           <Slide direction="up" triggerOnce>
             <div className="slide5-svg-container mt-3">
-              <img src={arquitectura} alt="Arquitectura" className="slide5-svg" />
+              <Arqui />
+              
             </div>
           </Slide>
           <div className="slide3-back-agenda" onClick={() => onNavigate && onNavigate(2)} style={{ cursor: 'pointer', marginTop: 32 }}>
@@ -62,18 +64,19 @@ function Slide5({ onNavigate }) {
           }
 
           .slide5-svg-container {
-            background: rgba(11, 10, 20, 0.85);
+            background: transparent;
             border-radius: 20px;
             box-shadow: 0 0 24px #42c8ee99;
             border: 2px solid #42c8ee;
-            padding: 2.5rem;
+            padding: 0.5rem;
             width: 100%;
-            max-width: 1000px;
+            max-width: 100vw;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             overflow: hidden;
+            height: 700px;
           }
 
           .slide5-svg {
