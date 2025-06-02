@@ -12,9 +12,9 @@ const agendaItems = [
   { text: "Arquitectura futura (n8n + IA)", slide: 8 },
   { text: "Flujo automatizado propuesto", slide: 9 },
   { text: "Impacto en personal y costos", slide: 10 },
-  { text: "KPIs & métricas", slide: 11 },
-  { text: "Roadmap de implementación", slide: 12 },
-  { text: "Preguntas", slide: 13 },
+  { text: "KPIs & métricas", slide: 13 },
+  { text: "Roadmap de implementación", slide: 11 },
+  { text: "Preguntas", slide: 12 },
 ];
 
 function Slide2({ onNavigate }) {

@@ -11,6 +11,7 @@ import Slide9 from "../Slide/Slide9";
 import Slide10 from "../Slide/Slide10";
 import Slide11 from "../Slide/Slide11";
 import Slide12 from "../Slide/Slide12";
+import Slide13 from "../Slide/Slide13";
 import { Slide } from "react-awesome-reveal";
 
 function Home() {
@@ -34,34 +35,37 @@ function Home() {
         <Slide2 onNavigate={handleNavigate} />
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide3"><Slide3 /></div>
+        <div id="slide3"><Slide3 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide4"><Slide4 /></div>
+        <div id="slide4"><Slide4 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide5"><Slide5 /></div>
+        <div id="slide5"><Slide5 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide6"><Slide6 /></div>
+        <div id="slide6"><Slide6 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide7"><Slide7 /></div>
+        <div id="slide7"><Slide7 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide8"><Slide8 /></div>
+        <div id="slide8"><Slide8 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide9"><Slide9 /></div>
+        <div id="slide13"><Slide13 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide10"><Slide10 /></div>
+        <div id="slide9"><Slide9 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide11"><Slide11 /></div>
+        <div id="slide10"><Slide10 onNavigate={handleNavigate} /></div>
       </Slide>
       <Slide direction="up" triggerOnce>
-        <div id="slide12"><Slide12 /></div>
+        <div id="slide11"><Slide11 onNavigate={handleNavigate} /></div>
+      </Slide>
+      <Slide direction="up" triggerOnce>
+        <div id="slide12"><Slide12 onNavigate={handleNavigate} /></div>
       </Slide>
     </section>
   );
