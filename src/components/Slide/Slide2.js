@@ -116,7 +116,7 @@ function Slide2({ onNavigate }) {
   font-size: 2.1em;
   font-weight: 700;
   color: #42c8ee;
-  text-shadow: 0 0 8px #42c8ee, 0 0 2px #fff;
+  text-shadow: 0 0 8px #42c8ee, 0 0 2px #d1d1d1;
   letter-spacing: 2px;
   background: transparent;
   padding: 0 0.5em;
@@ -142,7 +142,7 @@ function Slide2({ onNavigate }) {
             font-size: 2.1em;
             font-weight: 700;
             color: #42c8ee;
-            text-shadow: 0 0 8px #42c8ee, 0 0 2px #fff;
+            text-shadow: 0 0 8px #42c8ee, 0 0 2px #d1d1d1;
             letter-spacing: 2px;
             background: transparent;
             padding: 0 0.5em;
@@ -154,14 +154,14 @@ function Slide2({ onNavigate }) {
             border-radius: 8px;
             box-shadow: 0 0 18px #42c8ee;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #42c8ee 0%, #fff 100%);
+            background: linear-gradient(90deg, #42c8ee 0%, #d1d1d1 100%);
             z-index: 4;
             position: relative;
           }
           .slide2-line-bottom {
             margin-top: 18px;
             margin-bottom: 0;
-            background: linear-gradient(90deg, #fff 0%, #42c8ee 100%);
+            background: linear-gradient(90deg, #d1d1d1 0%, #42c8ee 100%);
           }
           .slide2-agenda-box {
             background: rgba(11, 10, 20, 0.85);
@@ -184,7 +184,7 @@ function Slide2({ onNavigate }) {
             padding-left: 24px;
             margin: 0;
             flex: 1;
-            color: #fff;
+            color: #d1d1d1;
             font-size: 1.15em;
             font-weight: 500;
             text-shadow: 0 2px 8px #0b0a15;
@@ -275,7 +275,7 @@ function Slide2({ onNavigate }) {
             }
             .slide2-title { 
               font-size: 1.3em; 
-              text-shadow: 0 0 4px #42c8ee, 0 0 1px #fff; 
+              text-shadow: 0 0 4px #42c8ee, 0 0 1px #d1d1d1; 
             }
             .slide2-line { 
               width: 110px; 

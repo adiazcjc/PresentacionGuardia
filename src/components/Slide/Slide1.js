@@ -19,9 +19,12 @@ function Slide1({ onNavigate }) {
         <polygon points="50,10 80,25 80,55 50,70 20,55 20,25" stroke="#42c8ee" strokeWidth="2" fill="none"/>
       </svg>
       <Container fluid className="d-flex flex-column align-items-center justify-content-center slide1-content" style={{ minHeight: "100vh", position: "relative", zIndex: 2 }}>
-        <h1 className="slide1-title">
-          Guardia Activa
+      <h1 className="slide1-title">
+          Presentación de
         </h1>
+        <h2 className="slide1-h2title">
+          Guardia Activa
+        </h2>
         <h3 className="slide1-subtitle">
           Monitoreo & Gestión de Incidentes 24x7
         </h3>
@@ -56,13 +59,21 @@ function Slide1({ onNavigate }) {
         .slide1-title {
           color: #42c8ee;
           font-weight: 800;
+          font-size: 2.5vw;
+          text-align: center;
+          margin-bottom: 0;
+          text-shadow: 0 0 18px #42c8ee, 0 0 2px #d1d1d1;
+        }
+        .slide1-h2title {
+          color: #42c8ee;
+          font-weight: 800;
           font-size: 4vw;
           text-align: center;
           margin-bottom: 0;
-          text-shadow: 0 0 18px #42c8ee, 0 0 2px #fff;
+          text-shadow: 0 0 18px #42c8ee, 0 0 2px #d1d1d1;
         }
         .slide1-subtitle {
-          color: #fff;
+          color: #d1d1d1;
           font-weight: 400;
           font-size: 2vw;
           text-align: center;

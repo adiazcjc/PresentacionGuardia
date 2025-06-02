@@ -53,7 +53,7 @@ function Slide6({ onNavigate }) {
             font-size: 1.3em;
             font-weight: 600;
             color: #42c8ee;
-            text-shadow: 0 0 6px #42c8ee, 0 0 1px #fff;
+            text-shadow: 0 0 6px #42c8ee, 0 0 1px #d1d1d1;
             letter-spacing: 1px;
             text-transform: none;
             background: transparent;
@@ -107,7 +107,7 @@ function Slide6({ onNavigate }) {
             justify-content: center;
           }
           .slide6-step-text {
-            color: #fff;
+            color: #d1d1d1;
             font-size: 1.18em;
             font-weight: 500;
             text-align: left;

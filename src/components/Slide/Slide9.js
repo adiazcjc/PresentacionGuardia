@@ -100,7 +100,7 @@ function Slide9({ onNavigate }) {
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ color: "#42c8ee", fontWeight: 700, fontSize: "1.13em", marginBottom: 2 }}>{paso.title}</div>
-                  <div style={{ color: "#fff", fontSize: "1.08em", whiteSpace: "pre-line" }}>{paso.desc}</div>
+                  <div style={{ color: "#d1d1d1", fontSize: "1.08em", whiteSpace: "pre-line" }}>{paso.desc}</div>
                 </div>
               </div>
             ))}

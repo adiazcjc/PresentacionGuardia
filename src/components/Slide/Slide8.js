@@ -35,15 +35,15 @@ function Slide8({ onNavigate }) {
             {/* Claves a la derecha */}
             <div style={{ flex: 1, minWidth: 260, marginLeft: 32 }}>
               <div style={{ color: "#42c8ee", fontWeight: 700, fontSize: "1.18em", marginBottom: 10 }}>Claves</div>
-              <ul style={{ color: "#fff", fontSize: "1.05em", marginBottom: 0, textAlign: "left", paddingleft: "0.5em" }}>
+              <ul style={{ color: "#d1d1d1", fontSize: "1.05em", marginBottom: 0, textAlign: "left", paddingleft: "0.5em" }}>
                 <li>Cada sensor = <span style={{ color: "#42c8ee", fontWeight: 600 }}>flujo n8n independiente</span></li>
                 <li>Nodos <span style={{ color: "#42c8ee", fontWeight: 600 }}>Execute Command / HTTP / DB</span> en n8n hacen pruebas</li>
                 <li>Resultado → tabla <span style={{ color: "#42c8ee", fontWeight: 600 }}>Eventos</span></li>
                 <li>Sub-flujo <span style={{ color: "#42c8ee", fontWeight: 600 }}>&quot;Gestor de incidentes&quot;</span> reacciona via Webhook interno cuando un INSERT cambia Status.</li>
                 <li>IA genera texto contextual a partir de Redis + últimos eventos y envía por</li>
-                <li><span style={{ color: "#fff" }}>Cada sensor = flujo n8n independiente con Cron trigger.</span></li>
-                <li><span style={{ color: "#fff" }}>Nodos <span style={{ color: "#42c8ee", fontWeight: 600 }}>Execute Command / HTTP / DB</span> en n8n hacen las pruebas.</span></li>
-                <li><span style={{ color: "#fff" }}>Resultado → tabla <span style={{ color: "#42c8ee", fontWeight: 600 }}>Eventos</span>.</span></li>
+                <li><span style={{ color: "#d1d1d1" }}>Cada sensor = flujo n8n independiente con Cron trigger.</span></li>
+                <li><span style={{ color: "#d1d1d1" }}>Nodos <span style={{ color: "#42c8ee", fontWeight: 600 }}>Execute Command / HTTP / DB</span> en n8n hacen las pruebas.</span></li>
+                <li><span style={{ color: "#d1d1d1" }}>Resultado → tabla <span style={{ color: "#42c8ee", fontWeight: 600 }}>Eventos</span>.</span></li>
               </ul>
             </div>
           </div>

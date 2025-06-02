@@ -13,7 +13,7 @@
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    color: #fff;
+    color: #d1d1d1;
     font-size: 1.25em;
     background: transparent;
     box-shadow: 0 0 18px #42c8ee44;
@@ -33,7 +33,7 @@
     font-weight: 700;
     letter-spacing: 1px;
     background: rgba(11, 10, 20, 0.95);
-    text-shadow: 0 0 8px #42c8ee, 0 0 2px #fff;
+    text-shadow: 0 0 8px #42c8ee, 0 0 2px #d1d1d1;
   }
   
   .futuristic-table tr {

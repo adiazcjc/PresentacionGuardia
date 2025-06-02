@@ -67,7 +67,7 @@ function Slide3({ onNavigate }) {
             font-size: 1.2em;
             font-weight: 600;
             color: #42c8ee;
-            text-shadow: 0 0 10px #42c8ee, 0 0 1px #fff;
+            text-shadow: 0 0 10px #42c8ee, 0 0 1px #d1d1d1;
             letter-spacing: 1px;
             text-align: center;
           }
