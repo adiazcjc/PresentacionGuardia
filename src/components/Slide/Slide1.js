@@ -125,7 +125,8 @@ function Slide1({ onNavigate }) {
           50% { transform: translateX(-50%) translateY(16px); }
         }
         @media (max-width: 900px) {
-          .slide1-title { font-size: 7vw; }
+          .slide1-title { font-size: 3vw; }
+          .slide1-h2title { font-size: 7vw; }
           .slide1-subtitle { font-size: 3.5vw; }
           .slide1-icon { font-size: 7vw; }
           .slide1-desc { font-size: 2.2vw; }
@@ -135,7 +136,8 @@ function Slide1({ onNavigate }) {
           .hex-svg-3 { width: 60px; height: 60px; top: 10px; right: 20px; }
         }
         @media (max-width: 600px) {
-          .slide1-title { font-size: 9vw; }
+          .slide1-title { font-size: 7vw; }
+          .slide1-h2title { font-size: 10vw; }
           .slide1-subtitle { font-size: 5vw; }
           .slide1-icon { font-size: 10vw; }
           .slide1-desc { font-size: 3vw; }
