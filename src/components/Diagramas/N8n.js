@@ -17,25 +17,35 @@ import {
   FaBuilding,
   FaLaptopCode,
   FaBrain,
+  FaMailBulk,
+  FaMicrochip,
+  FaParagraph,
+  FaPaperPlane,
+  FaChartBar,
 } from "react-icons/fa";
 
 function getIcon(label) {
   const icons = {
-    IA_AGENTE: FaBrain,
+   
     "PING FLOW": FaTools,
     "DB HEALTH FLOW": FaDatabase,
     "HTTP | API FLOW": FaServer,
 
-    SUCURSALES: FaBuilding,
-    "SERVICIOS Y APLICACIONES": FaLaptopCode,
+    "IA AGENTE BOOT": FaBrain,
+    "RAG": FaServer,
+
+    "IA AGENTE DISTRIBUIDOR": FaMicrochip,
+    "IA AGENTE NOTIFICADOR": FaBrain,
+    "EVOLUTION API": FaParagraph ,
+    "EMAIL": FaMailBulk,
+    "ESCALAMIENTO": FaLaptopCode,
+    "OPERADOR": FaUserCog,
+    "RECLAMO CARGA DE TICKET": FaPaperPlane,
     "SGA APP (C#)": FaServer,
     "ENLACES DE\n COMUNICACIONES": FaNetworkWired,
     "SGA DB\nSQL SERVER": FaDatabase,
-    OPERADOR: FaUserCog,
-    "REACT DASHBOARD": FaReact,
-    "RECLAMOS: carga de tickets en\n proveedores": FaBug,
-    "ESCALAMIENTO 1° NIVEL (SERGIO ORTIZ)": FaUserCog,
-    "SEGUIMIENTO: consulta periódica de tickets abiertos o escalamiento": FaBug,
+    "SQL": FaDatabase,
+    "IA AGENTE REPORTES": FaChartBar,
   };
 
   const Icon = icons[label] || FaServer;
@@ -94,6 +104,7 @@ function DiagramaN8n() {
       style: nodeStyle,
       sourcePosition: "right",
       targetPosition: "right",
+      draggable: false,
     },
     {
       id: "db",
@@ -102,6 +113,7 @@ function DiagramaN8n() {
       style: nodeStyle,
       sourcePosition: "right",
       targetPosition: "right",
+      draggable: false,
     },
     {
       id: "http",
@@ -110,6 +122,7 @@ function DiagramaN8n() {
       style: nodeStyle,
       sourcePosition: "right",
       targetPosition: "right",
+      draggable: false,
     },
     {
       id: "boot",
@@ -118,6 +131,7 @@ function DiagramaN8n() {
       style: nodeStyle,
       sourcePosition: "bottom",
       targetPosition: "bottom",
+      draggable: false,
     },
     {
       id: "rag",
@@ -126,69 +140,78 @@ function DiagramaN8n() {
       style: nodeStyle,
       sourcePosition: "top",
       targetPosition: "top",
+      draggable: false,
     },
     {
       id: "distribuidor",
       position: { x: 310, y: 100 },
-      data: { label: "IA AGENTE DISTRIBUIDOR" },
+      data: { label: getIcon("IA AGENTE DISTRIBUIDOR") },
       style: nodeStyle,
       sourcePosition: "bottom",
       targetPosition: "left",
+      draggable: false,
     },
     {
       id: "notificador",
       position: { x: 310, y: 240 },
-      data: { label: "IA AGENTE NOTIFICADOR" },
+      data: { label: getIcon("IA AGENTE NOTIFICADOR") },
       style: nodeStyle,
       sourcePosition: "bottom",
       targetPosition: "top",
-      
+      draggable: false,
     },
     {
       id: "evolution",
       position: { x: 215, y: 370 },
-      data: { label: "EVOLUTION API" },
+      data: { label: getIcon("EVOLUTION API") },
       style: nodeStyle,
+      draggable: false,
     },
     {
       id: "email",
       position: { x: 415, y: 370 },
-      data: { label: "EMAIL" },
+      data: { label: getIcon("EMAIL") },
       style: nodeStyle,
+      draggable: false,
     },
     {
       id: "escalamiento",
       position: { x: 200, y: 480 },
-      data: { label: "ESCALAMIENTO" },
+      data: { label: getIcon("ESCALAMIENTO") },
       style: nodeStyle,
+      draggable: false,
     },
     {
       id: "operador",
       position: { x: 390, y: 480 },
       data: { label: getIcon("OPERADOR") },
       style: nodeStyle,
+      draggable: false,
     },
     {
       id: "reclamo",
       position: { x: 390, y: 590 },
-      data: { label: "RECLAMO\nCARGA DE TICKET" },
+      data: { label: getIcon("RECLAMO CARGA DE TICKET") },
       style: nodeStyle,
+      draggable: false,
     },
     {
       id: "reportes",
       position: { x: 620, y: 370 },
-      data: { label: "IA AGENTE REPORTES" },
+      data: { label: getIcon("IA AGENTE REPORTES") },
       style: nodeStyle,
       sourcePosition: "top",
       targetPosition: "top",
+      draggable: false,
     },
     {
       id: "sql",
       position: { x: 620, y: 200 },
-      data: { label: "SQL" },
+      data: { label: getIcon("SQL") },
       style: nodeStyle,
       targetPosition: "top",
       sourcePosition: "bottom",
+      draggable: false,
     },
   ];
 

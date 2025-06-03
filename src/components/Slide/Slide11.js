@@ -3,10 +3,10 @@ import { Container } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
 
 const data = [
-  ["Q2 ‘25", "Diseñar flujos n8n básicos (Ping, DB, HTTP).\nPlantilla SQL \"Eventos\"."],
-  ["Q3 ‘25", "IA Nivel 1 (clasificación) · Canal WhatsApp\nDashboard Grafana"],
-  ["Q4 ‘25", "IA Nivel 2 (respuesta contextual + RAG)\nRedis vector store"],
-  ["Q1 ‘26", "IA Nivel 3 (acciones remotas) · Reducción\noperadores"],
+  ["Q3 ‘25", "Flujos n8n básicos (ping, consultas DB, HTTP) + plantilla SQL “Eventos”", "Se migran las sondas principales a n8n.- Se crea una tabla estándar para almacenar eventos en SQL Server."],
+  ["Q4 ‘25", "IA Nivel 1 (clasificación) + canal WhatsApp + dashboard Grafana", "Un modelo pequeño (p.ej. Mistral 7B) decide si la alerta es técnica o de negocio.- \nNotificaciones automáticas por WhatsApp usando Evolution API.- Se rediseña el dashboard React "],
+  ["Q1 ‘26", "IA Nivel 2 (respuesta contextual + RAG) + Redis Vector Store" ,"- El mismo incidente se explica con datos históricos (retrieval-augmented generation).- \nRedis actúa como almacén vectorial para búsquedas semánticas."],
+  ["Q2 ‘26", "IA Nivel 3 (acciones remotas) + reducción de operadores", "La IA no solo explica, sino que propone o ejecuta acciones (reinicios, scripts).- Con la automatización madura, el equipo de 8 operadores puede reducirse, liberando presupuesto."],
 ];
 
 function Slide11({ onNavigate }) {
@@ -23,8 +23,9 @@ function Slide11({ onNavigate }) {
             <table className="futuristic-table slide11-table" style={{ fontSize: "0.98em" }}>
               <thead>
                 <tr>
-                  <th style={{ fontSize: "1em", textAlign: "left", width: "22%" }}>TRIMESTRE</th>
-                  <th style={{ fontSize: "1em", textAlign: "left" }}>ENTREGABLE</th>
+                  <th style={{ fontSize: "1em", textAlign: "left", width: "22%" }}>Trimestre</th>
+                  <th style={{ fontSize: "1em", textAlign: "left" }}>¿Qué se entrega?</th>
+                  <th style={{ fontSize: "1em", textAlign: "left" }}>¿Qué implica?</th>
                 </tr>
               </thead>
               <tbody>

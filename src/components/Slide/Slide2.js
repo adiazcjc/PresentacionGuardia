@@ -11,11 +11,26 @@ const agendaItems = [
   { text: "Limitaciones & oportunidades", slide: 7 },
   { text: "Arquitectura futura (n8n + IA)", slide: 8 },
   { text: "Flujo automatizado propuesto", slide: 9 },
+  { text: "Roadmap de implementación", slide: 11 },
+  { text: "Preguntas", slide: 12 },
+];
+
+{/*
+  
+  const agendaItems = [
+  { text: "Panorama del servicio", slide: 3 },
+  { text: "Componentes actuales", slide: 4 },
+  { text: "Arquitectura actual", slide: 5 },
+  { text: "Flujo operativo actual", slide: 6 },
+  { text: "Limitaciones & oportunidades", slide: 7 },
+  { text: "Arquitectura futura (n8n + IA)", slide: 8 },
+  { text: "Flujo automatizado propuesto", slide: 9 },
   { text: "Impacto en personal y costos", slide: 10 },
   { text: "KPIs & métricas", slide: 13 },
   { text: "Roadmap de implementación", slide: 11 },
   { text: "Preguntas", slide: 12 },
 ];
+  */}
 
 function Slide2({ onNavigate }) {
   // Dividir la agenda en dos columnas

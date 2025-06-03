@@ -87,6 +87,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "right",
       targetPosition: "right",
+      draggable: false,
     },
     {
       id: "sucursales",
@@ -96,6 +97,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "right",
       targetPosition: "right",
+      draggable: false,
     },
     {
       id: "atms",
@@ -105,6 +107,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "right",
       targetPosition: "right",
+      draggable: false,
     },
     {
       id: "infra",
@@ -114,6 +117,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "right",
       targetPosition: "right",
+      draggable: false,
     },
     {
       id: "enlaces",
@@ -123,6 +127,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "right",
       targetPosition: "right",
+      draggable: false,
     },
     {
       id: "sga",
@@ -131,7 +136,8 @@ function DiagramaSGAConIconos() {
       style: nodeStyle,
       type: "default",
       //sourcePosition: "left",
-     targetPosition: "left",
+      targetPosition: "left",
+      draggable: false,
     },
     {
       id: "sgadb",
@@ -139,7 +145,7 @@ function DiagramaSGAConIconos() {
       data: { label: getIcon("SGA DB\nSQL SERVER") },
       style: nodeStyle,
       type: "default",
-      
+      draggable: false,
     },
     {
       id: "operador",
@@ -149,6 +155,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "right",
       targetPosition: "left",
+      draggable: false,
     },
     {
       id: "operador_top",
@@ -158,6 +165,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "top",
       targetPosition: "top",
+      draggable: false,
     },
     {
       id: "reclamos",
@@ -167,6 +175,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "bottom",
       targetPosition: "bottom",
+      draggable: false,
     },
     {
       id: "escalamiento",
@@ -176,6 +185,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "left",
       targetPosition: "left",
+      draggable: false,
     },
     {
       id: "seguimiento",
@@ -189,6 +199,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       sourcePosition: "left",
       targetPosition: "left",
+      draggable: false,
     },
     {
       id: "dashboard",
@@ -198,6 +209,7 @@ function DiagramaSGAConIconos() {
       type: "default",
       targetPosition: "left",
       sourcePosition: "left",
+      draggable: false,
     },
   ];
 

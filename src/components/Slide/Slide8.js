@@ -2,7 +2,13 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
 import N8n from "../Diagramas/N8n";
-
+const data = [
+  ["Cada sensor (flow) independiente"],
+  ["Registro de incidentes con gestión IA."],
+  ["IA agente bot para contestar consultas de estado"],
+  ["IA agente reportes encargado de resolver las peticiones de reportes."],
+  ["IA agente notificador gestiona, evalúa y prepara las notificaciones."]
+];
 function Slide8({ onNavigate }) {
   return (
     <Container
@@ -24,6 +30,34 @@ function Slide8({ onNavigate }) {
           <div className="slide8-svg-container mt-3">
             <N8n />
             
+          </div>
+        </Slide>
+        <Slide direction="up" triggerOnce>
+          <div className="futuristic-table-wrapper futuristic-table-animated mt-3 slide11-table-wrapper" style={{ padding: "1.2rem 0.7rem", maxWidth: 800 }}>
+            <table className="futuristic-table slide11-table" style={{ fontSize: "0.98em" }}>
+              <thead>
+                
+              </thead>
+              <tbody>
+                {data.map((row, i) => (
+                  <tr key={i}>
+                    {row.map((cell, j) => (
+                      <td
+                        key={j}
+                        style={{
+                          textAlign: "left",
+                          fontWeight: j === 0 ? 700 : 500,
+                          whiteSpace: "pre-line",
+                          fontSize: "1.08em"
+                        }}
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </Slide>
         <div className="slide3-back-agenda" onClick={() => onNavigate && onNavigate(2)} style={{ cursor: 'pointer', marginTop: 32 }}>

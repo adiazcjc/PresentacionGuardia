@@ -52,15 +52,21 @@ function Home() {
       <Slide direction="up" triggerOnce>
         <div id="slide8"><Slide8 onNavigate={handleNavigate} /></div>
       </Slide>
+      {/*
       <Slide direction="up" triggerOnce>
         <div id="slide13"><Slide13 onNavigate={handleNavigate} /></div>
       </Slide>
+      */}
       <Slide direction="up" triggerOnce>
         <div id="slide9"><Slide9 onNavigate={handleNavigate} /></div>
       </Slide>
+        {/*
       <Slide direction="up" triggerOnce>
         <div id="slide10"><Slide10 onNavigate={handleNavigate} /></div>
       </Slide>
+    
+      
+      */}
       <Slide direction="up" triggerOnce>
         <div id="slide11"><Slide11 onNavigate={handleNavigate} /></div>
       </Slide>
