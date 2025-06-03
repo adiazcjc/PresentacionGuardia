@@ -21,7 +21,8 @@ function Slide6({ onNavigate }) {
 
         <Slide direction="up" triggerOnce>
           <div className="slide6-steps-box mt-3" style={{ padding: 0, maxWidth: '100%', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img src={flujo} alt="Flujo" className="slide6-flujo" style={{ width: '90%', height: 'auto', display: 'block', maxWidth: '90%' }} />
+            {/* <img src={flujo} alt="Flujo" className="slide6-flujo" style={{ width: '90%', height: 'auto', display: 'block', maxWidth: '90%' }} /> */}
+            <Flujo />
           </div>
         </Slide>
         <div className="slide3-back-agenda" onClick={() => onNavigate && onNavigate(2)} style={{ cursor: 'pointer', marginTop: 32 }}>

@@ -16,25 +16,39 @@ import {
   FaTools,
   FaBuilding,
   FaLaptopCode,
+  FaCode,
+  FaFileAlt,
+  FaArrowUp,
+  FaClipboardCheck,
+  FaUser,
+  FaCreditCard,
 } from "react-icons/fa";
+import { SiCsharp } from "react-icons/si";
 
 function getIcon(label) {
+  // Normalizar: quitar saltos de línea y espacios extra
+  const cleanLabel = label.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim().toUpperCase();
+  // Depuración
+  // console.log('cleanLabel:', cleanLabel);
   const icons = {
-    INFRAESTRUCTURA: FaNetworkWired,
-    "ATM's": FaTools,
-    SUCURSALES: FaBuilding,
-    "SERVICIOS Y APLICACIONES": FaLaptopCode,
-    "SGA APP (C#)": FaServer,
-    "ENLACES DE\n COMUNICACIONES": FaNetworkWired,
-    "SGA DB\nSQL SERVER": FaDatabase,
-    OPERADOR: FaUserCog,
-    "REACT DASHBOARD": FaReact,
-    "RECLAMOS: carga de tickets en\n proveedores": FaBug,
-    "ESCALAMIENTO 1° NIVEL (SERGIO ORTIZ)": FaUserCog,
-    "SEGUIMIENTO: consulta periódica de tickets abiertos o escalamiento": FaBug,
+    'INFRAESTRUCTURA': FaServer,
+    "ATM'S": FaCreditCard,
+    'SUCURSALES': FaBuilding,
+    'SERVICIOS Y APLICACIONES': FaLaptopCode,
+    'SGA APP (C#)': SiCsharp,
+    'SGA APP C#': SiCsharp,
+    'ENLACES DE COMUNICACIONES': FaNetworkWired,
+    'SGA DB SQL SERVER': FaDatabase,
+    'OPERADOR': FaUserCog,
+    'REACT DASHBOARD': FaReact,
+    'RECLAMOS: CARGA DE TICKETS EN PROVEEDORES': FaFileAlt,
+ 
+    'ESCALAMIENTO 1° NIVEL (SERGIO ORTIZ)': FaArrowUp,
+    'ESCALAMIENTO: 1° NIVEL (SERGIO ORTIZ)': FaUser,
+    'SEGUIMIENTO: CONSULTA PERIÓDICA DE TICKETS ABIERTOS O ESCALAMIENTO': FaClipboardCheck,
+  
   };
-
-  const Icon = icons[label] || FaServer;
+  const Icon = icons[cleanLabel] || FaServer;
   return (
     <div
       style={{
@@ -91,7 +105,7 @@ function DiagramaSGAConIconos() {
     },
     {
       id: "sucursales",
-      position: { x: 60, y: 140 },
+      position: { x: 60, y: 145 },
       data: { label: getIcon("SUCURSALES") },
       style: nodeStyle,
       type: "default",
@@ -101,7 +115,7 @@ function DiagramaSGAConIconos() {
     },
     {
       id: "atms",
-      position: { x: 60, y: 240 },
+      position: { x: 60, y: 250 },
       data: { label: getIcon("ATM'S") },
       style: nodeStyle,
       type: "default",
@@ -111,7 +125,7 @@ function DiagramaSGAConIconos() {
     },
     {
       id: "infra",
-      position: { x: 60, y: 340 },
+      position: { x: 60, y: 355 },
       data: { label: getIcon("INFRAESTRUCTURA") },
       style: nodeStyle,
       type: "default",
@@ -131,7 +145,7 @@ function DiagramaSGAConIconos() {
     },
     {
       id: "sga",
-      position: { x: 320, y: 120 },
+      position: { x: 320, y: 140 },
       data: { label: getIcon("SGA APP\nC#") },
       style: nodeStyle,
       type: "default",
@@ -149,7 +163,7 @@ function DiagramaSGAConIconos() {
     },
     {
       id: "operador",
-      position: { x: 600, y: 180 },
+      position: { x: 600, y: 240 },
       data: { label: getIcon("OPERADOR") },
       style: nodeStyle,
       type: "default",
@@ -159,7 +173,7 @@ function DiagramaSGAConIconos() {
     },
     {
       id: "operador_top",
-      position: { x: 600, y: 180 },
+      position: { x: 600, y: 240 },
       data: { label: getIcon("OPERADOR") },
       style: nodeStyle,
       type: "default",
@@ -180,7 +194,7 @@ function DiagramaSGAConIconos() {
     {
       id: "escalamiento",
       position: { x: 900, y: 160 },
-      data: { label: getIcon("ESCALAMIENTO:\n1° NIVEL (SERGIO ORTIZ)") },
+      data: { label: getIcon("ESCALAMIENTO: 1° NIVEL (SERGIO ORTIZ)") },
       style: nodeStyle,
       type: "default",
       sourcePosition: "left",
@@ -192,7 +206,7 @@ function DiagramaSGAConIconos() {
       position: { x: 900, y: 260 },
       data: {
         label: getIcon(
-          "SEGUIMIENTO:\nCONSULTA PERIÓDICA\nSOBRE TICKETS ABIERTOS O\n ESCALAMIENTO."
+          "SEGUIMIENTO: CONSULTA PERIÓDICA DE TICKETS ABIERTOS O ESCALAMIENTO"
         ),
       },
       style: nodeStyle,
