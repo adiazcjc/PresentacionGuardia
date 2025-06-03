@@ -24,11 +24,12 @@ function Slide3({ onNavigate }) {
             <tbody>
               <tr>
                 <td>Cobertura</td>
-                <td>123 h/semana (L-V 17-08 h)<br/>+ fines de semana/feriados</td>
+                <td>Semana L-V 17:00-08:00<br/>fin de semana y feriados 24Horas</td>
+                
               </tr>
               <tr>
                 <td>Activos</td>
-                <td>≈ 230 (servidores, BD, sitios, APIs, enlaces)</td>
+                <td>250 activos monitoreados aproximadamente</td>
               </tr>
               <tr>
                 <td>Objetivo</td>
@@ -36,7 +37,7 @@ function Slide3({ onNavigate }) {
               </tr>
               <tr>
                 <td>Equipo</td>
-                <td>5 operadores + 2 relevos + 1 coordinador</td>
+                <td>5 operadores + 2 reemplazos + 1 coordinador</td>
               </tr>
             </tbody>
           </table>

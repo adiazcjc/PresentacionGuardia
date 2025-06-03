@@ -1,10 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
-import flujo from "../../assets/flujo.png";
-
-
-
+import flujo from "../../assets/flujos.png";
+import Flujo from "../Diagramas/Flujo";
 function Slide6({ onNavigate }) {
   return (
     <Container
@@ -22,8 +20,8 @@ function Slide6({ onNavigate }) {
         </Slide>
 
         <Slide direction="up" triggerOnce>
-          <div className="slide6-steps-box mt-3">
-            <img src={flujo} alt="Flujo" className="slide6-flujo" />
+          <div className="slide6-steps-box mt-3" style={{ padding: 0, maxWidth: '100%', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img src={flujo} alt="Flujo" className="slide6-flujo" style={{ width: '90%', height: 'auto', display: 'block', maxWidth: '90%' }} />
           </div>
         </Slide>
         <div className="slide3-back-agenda" onClick={() => onNavigate && onNavigate(2)} style={{ cursor: 'pointer', marginTop: 32 }}>
@@ -65,12 +63,12 @@ function Slide6({ onNavigate }) {
             border-radius: 18px;
             box-shadow: 0 0 32px #42c8ee99, 0 0 8px #0b0a14;
             border: 2px solid #42c8ee;
-            padding: 2.5rem 2.5rem 2rem 2.5rem;
+            padding: 0;
             width: 100%;
-            max-width: 440px;
+            max-width: 100%;
             margin: 0 auto;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
           }
           .slide6-step-row {
@@ -130,6 +128,12 @@ function Slide6({ onNavigate }) {
           .slide3-back-agenda:hover {
             transform: translateY(-6px) scale(1.08);
             filter: drop-shadow(0 0 12px #42c8ee);
+          }
+          .slide6-flujo {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
           }
           @media (max-width: 600px) {
             .slide6-steps-box {

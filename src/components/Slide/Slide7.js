@@ -3,10 +3,10 @@ import { Container } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
 
 const data = [
-  ["Escalamiento", "Manual", "Workflows n8n"],
-  ["Mensajería", "Teléfono / Teams", "WhatsApp / Telegram\nc/ Evolution API"],
-  ["Contexto", "Sin histórico\nen mensaje", "RAG + IA"],
-  ["Costes", "8 operadores", "Reducción 40-50 %"],
+  ["Escalamiento", "Manual", "Workflows n8n + IA (autónomo)"],
+  ["Mensajería", "Teléfono – email", "WhatsApp / Telegram / APP mobile / c/Evolution Api"],
+  ["Contexto", "Registro manual de\nmensajería (email)", "RAG + IA"],
+  ["Costes", "5 operadores Fijos\n2 operadores Eventuales\n1 Coordinador", "Reducción 40%"],
   ["Modularidad", "App monolítica", "Sensores como flujos\nn8n separados"],
 ];
 

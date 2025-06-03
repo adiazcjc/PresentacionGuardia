@@ -1,72 +1,30 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
-import arqfutura from "../../assets/arqfutura.png";
+import N8n from "../Diagramas/N8n";
 
 function Slide8({ onNavigate }) {
   return (
-    <Container fluid className="home-about-section d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
-    id="slide8">
-      
-      <Container className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "100vh", maxWidth: 1200 }}>
+    <Container
+    fluid
+    className="home-about-section d-flex align-items-center justify-content-center"
+    style={{ minHeight: "100vh" }}
+  >
+   
+    <Container
+      id="slide5"
+      className="d-flex flex-column align-items-center justify-content-center slide5-container"
+      style={{ minHeight: "100vh", maxWidth: 1400 }}
+    >
       <Slide direction="up" triggerOnce>
-        <h1 className="slide1-title">Arquitectura Futura (Fase 1 – Sensores n8n)</h1>
+        <h1 className="slide1-title">Arquitectura Futura (Sensores n8n – ia) </h1>
       </Slide>
+        
         <Slide direction="up" triggerOnce>
-          <div className="slide8-responsive-box" style={{
-            background: "rgba(11, 10, 20, 0.85)",
-            borderRadius: 18,
-            boxShadow: "0 0 32px #42c8ee99, 0 0 8px #0b0a14",
-            border: "2px solid #42c8ee",
-            padding: "2.5rem 2.5rem 2rem 2.5rem",
-            width: "100%",
-            maxWidth: 1100,
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-start",
-            gap: 36,
-            marginTop: "2rem"
-          }}>
-            {/* Diagrama principal */}
-            <div style={{ flex: 2, minWidth: 600, display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <img src={arqfutura} alt="Arquitectura Futura" className="slide8-arqfutura" />
-            </div>
-            {/* Claves a la derecha */}
-            <div style={{ flex: 1, minWidth: 260, marginLeft: 32 }}>
-              <div style={{ color: "#42c8ee", fontWeight: 700, fontSize: "1.18em", marginBottom: 10 }}>Claves</div>
-              <ul style={{ color: "#d1d1d1", fontSize: "1.05em", marginBottom: 0, textAlign: "left", paddingleft: "0.5em" }}>
-                <li>Cada sensor = <span style={{ color: "#42c8ee", fontWeight: 600 }}>flujo n8n independiente</span></li>
-                <li>Nodos <span style={{ color: "#42c8ee", fontWeight: 600 }}>Execute Command / HTTP / DB</span> en n8n hacen pruebas</li>
-                <li>Resultado → tabla <span style={{ color: "#42c8ee", fontWeight: 600 }}>Eventos</span></li>
-                <li>Sub-flujo <span style={{ color: "#42c8ee", fontWeight: 600 }}>&quot;Gestor de incidentes&quot;</span> reacciona via Webhook interno cuando un INSERT cambia Status.</li>
-                <li>IA genera texto contextual a partir de Redis + últimos eventos y envía por</li>
-                <li><span style={{ color: "#d1d1d1" }}>Cada sensor = flujo n8n independiente con Cron trigger.</span></li>
-                <li><span style={{ color: "#d1d1d1" }}>Nodos <span style={{ color: "#42c8ee", fontWeight: 600 }}>Execute Command / HTTP / DB</span> en n8n hacen las pruebas.</span></li>
-                <li><span style={{ color: "#d1d1d1" }}>Resultado → tabla <span style={{ color: "#42c8ee", fontWeight: 600 }}>Eventos</span>.</span></li>
-              </ul>
-            </div>
+          <div className="slide8-svg-container mt-3">
+            <N8n />
+            
           </div>
-          {/* Bullets abajo */}
-          <style>{`
-            @media (max-width: 900px) {
-              .slide8-responsive-box {
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 18px !important;
-                padding: 1.2rem 0.5rem 1rem 0.5rem !important;
-              }
-              .slide8-arqfutura {
-                min-width: 0 !important;
-                max-width: 98vw !important;
-                width: 100% !important;
-              }
-              .slide8-responsive-box > div {
-                min-width: 0 !important;
-                margin-left: 0 !important;
-              }
-            }
-          `}</style>
         </Slide>
         <div className="slide3-back-agenda" onClick={() => onNavigate && onNavigate(2)} style={{ cursor: 'pointer', marginTop: 32 }}>
           <svg width="44" height="28" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,8 +40,114 @@ function Slide8({ onNavigate }) {
           </div>
         </div>
         <div className="slide2-line slide2-line-bottom" /> 
-      </Container>
+
+      <style>{`
+        .slide5-container {
+          padding: 1rem;
+        }
+
+        .slide5-title-container {
+          margin-bottom: 2rem;
+          text-align: center;
+          width: 100%;
+        }
+
+        .slide5-title {
+          font-size: 2em;
+          font-weight: 600;
+          color: #42c8ee;
+          text-shadow: 0 0 10px #42c8ee;
+          letter-spacing: 2px;
+          display: inline-block;
+        }
+
+        .slide5-svg-container {
+          background: transparent;
+          border-radius: 20px;
+          box-shadow: 0 0 24px #42c8ee99;
+          border: 2px solid #42c8ee;
+          padding: 0.5rem;
+          width: 100%;
+          max-width: 100vw;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          overflow: hidden;
+          height: 700px;
+        }
+
+        .slide5-svg {
+          max-width: 100%;
+          height: auto;
+        }
+
+        /* Media queries para diferentes tamaños de pantalla */
+        @media (max-width: 1200px) {
+          .slide5-svg-container {
+            padding: 2rem;
+          }
+          .slide5-title {
+            font-size: 1.8em;
+          }
+        }
+
+        @media (max-width: 992px) {
+          .slide5-svg-container {
+            padding: 1.5rem;
+          }
+          .slide5-title {
+            font-size: 1.6em;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .slide5-svg-container {
+            padding: 1rem;
+            margin: 0 0.5rem;
+          }
+          .slide5-title {
+            font-size: 1.4em;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .slide5-container {
+            padding: 0.5rem;
+          }
+          .slide5-svg-container {
+            padding: 0.8rem;
+            border-radius: 15px;
+          }
+          .slide5-title {
+            font-size: 1.2em;
+            letter-spacing: 1px;
+          }
+        }
+
+        /* Ajustes para pantallas muy pequeñas */
+        @media (max-width: 400px) {
+          .slide5-svg-container {
+            padding: 0.5rem;
+          }
+          .slide5-title {
+            font-size: 1.1em;
+          }
+        }
+
+        .slide3-back-agenda {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: transform 0.2s;
+        }
+        .slide3-back-agenda:hover {
+          transform: translateY(-6px) scale(1.08);
+          filter: drop-shadow(0 0 12px #42c8ee);
+        }
+      `}</style>
     </Container>
+  </Container>
   );
 }
 

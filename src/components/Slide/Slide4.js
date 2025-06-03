@@ -75,7 +75,7 @@ function Slide4({ onNavigate }) {
                     <FaUserFriends className="icon-neon" size={18} /> Operador
                   </div>
                 </td>
-                <td>8 personas</td>
+                <td>Operador</td>
                 <td>Controla la app de Guardia, escala, inicia reclamos y hace seguimiento.</td>
               </tr>
             </tbody>

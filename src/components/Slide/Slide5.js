@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
 import "../../styles/slide.css";
-import arquitectura from "../../assets/arquitectura.png";
 import Arqui from "../Diagramas/Arqui";
 
 function Slide5({ onNavigate }) {
