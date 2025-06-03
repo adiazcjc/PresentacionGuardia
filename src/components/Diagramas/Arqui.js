@@ -25,11 +25,11 @@ function getIcon(label) {
     SUCURSALES: FaBuilding,
     "SERVICIOS Y APLICACIONES": FaLaptopCode,
     "SGA APP (C#)": FaServer,
-    "ENLACES DE COMUNICACIONES": FaNetworkWired,
+    "ENLACES DE\n COMUNICACIONES": FaNetworkWired,
     "SGA DB\nSQL SERVER": FaDatabase,
     OPERADOR: FaUserCog,
     "REACT DASHBOARD": FaReact,
-    "RECLAMOS: carga de tickets en proveedores": FaBug,
+    "RECLAMOS: carga de tickets en\n proveedores": FaBug,
     "ESCALAMIENTO 1° NIVEL (SERGIO ORTIZ)": FaUserCog,
     "SEGUIMIENTO: consulta periódica de tickets abiertos o escalamiento": FaBug,
   };
@@ -118,7 +118,7 @@ function DiagramaSGAConIconos() {
     {
       id: "enlaces",
       position: { x: 60, y: 480 },
-      data: { label: getIcon("ENLACES\nDE COMUNICACIONES") },
+      data: { label: getIcon("ENLACES DE\nCOMUNICACIONES") },
       style: nodeStyle,
       type: "default",
       sourcePosition: "right",
@@ -162,7 +162,7 @@ function DiagramaSGAConIconos() {
     {
       id: "reclamos",
       position: { x: 600, y: 5 },
-      data: { label: getIcon("RECLAMOS:\nCARGA DE TICKETS\nEN PROVEEDORES") },
+      data: { label: getIcon("RECLAMOS:\nCARGA DE TICKETS EN\n PROVEEDORES") },
       style: nodeStyle,
       type: "default",
       sourcePosition: "bottom",
@@ -182,7 +182,7 @@ function DiagramaSGAConIconos() {
       position: { x: 900, y: 260 },
       data: {
         label: getIcon(
-          "SEGUIMIENTO:\nCONSULTA PERIÓDICA\nSOBRE TICKETS ABIERTOS\nO ESCALAMIENTO."
+          "SEGUIMIENTO:\nCONSULTA PERIÓDICA\nSOBRE TICKETS ABIERTOS O\n ESCALAMIENTO."
         ),
       },
       style: nodeStyle,
