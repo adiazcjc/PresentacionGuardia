@@ -47,26 +47,33 @@ function Slide4({ onNavigate }) {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr onClick={() => setShowSensoresModal(true)} style={{ cursor: "pointer" }}>
                 <td>1</td>
-                <td style={{ display: "flex", alignItems: "center", gap: 7, cursor: "pointer" }} onClick={() => setShowSensoresModal(true)}>
-                  <MdSensors className="icon-neon" size={18} /> App Sensores
+                <td style={{ padding: 0 }} >
+                  <div style={{ display: "flex", alignItems: "center", gap: 7, height: "100%", padding: "0.7em 0.5em" }}>
+                    <MdSensors className="icon-neon" size={18} /> 
+                    App Sensores
+                  </div>
                 </td>
                 <td>C# (.NET) · SQL Server</td>
                 <td>Ejecuta controles (ping, DB, web, APIs, enlaces), valora criticidad y graba eventos.</td>
               </tr>
-              <tr>
+              <tr onClick={() => setShowDashboardModal(true)} style={{ cursor: "pointer" }}>
                 <td>2</td>
-                <td style={{ display: "flex", alignItems: "center", gap: 7, cursor: "pointer" }} onClick={() => setShowDashboardModal(true)}>
-                  <MdDashboard className="icon-neon" size={18} /> Dashboard
+                <td style={{ padding: 0 }} >
+                  <div style={{ display: "flex", alignItems: "center", gap: 7, height: "100%", padding: "0.7em 0.5em" }}>
+                    <MdDashboard className="icon-neon" size={18} /> Dashboard
+                  </div>
                 </td>
                 <td>React.js · C# API</td>
                 <td>Muestra estados en tiempo real, históricos, KPIs.</td>
               </tr>
-              <tr>
+              <tr onClick={() => setShowOperadoresModal(true)} style={{ cursor: "pointer" }}>
                 <td>3</td>
-                <td style={{ display: "flex", alignItems: "center", gap: 7, cursor: "pointer" }} onClick={() => setShowOperadoresModal(true)}>
-                  <FaUserFriends className="icon-neon" size={18} /> Operador
+                <td style={{ padding: 0 }} >
+                  <div style={{ display: "flex", alignItems: "center", gap: 7, height: "100%", padding: "0.7em 0.5em" }}>
+                    <FaUserFriends className="icon-neon" size={18} /> Operador
+                  </div>
                 </td>
                 <td>8 personas</td>
                 <td>Controla la app de Guardia, escala, inicia reclamos y hace seguimiento.</td>
